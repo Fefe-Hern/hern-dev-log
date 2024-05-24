@@ -1,0 +1,66 @@
+---
+title: Introduction, Rough Starts, and BigCommerce
+draft: true
+date: 2024-05-19T18:04:13.255Z
+lastmod: 2024-05-19T18:04:13.256Z
+tags:
+  - reflection
+  - bigcommerce
+summary: 'I owe the programming community my regards, and plan to share my knowledge of BigCommerce as an introduction.'
+layout: PostLayout
+images: ''
+keywords:
+  - BigCommerce
+  - Introduction
+slug: introduction-rough-start-bigcommerce
+---
+
+## An Introduction
+
+> Seven years ago, I'm still in the same spot I am now: Trying to say 'Hello'
+
+Hi, I'm Fernando, and I have a confession to make.
+
+I recently looked back at my old repositories on GitHub and GitLab, and I see a bunch of baby projects I worked on during community college seven years ago.
+
+I've been programming since 2014, but to tell the truth, I don't have anything on my GitHub repo to show for it—just a bunch of flatlined, empty projects and templates. I've focused on commercial programming without working on self-projects or giving back to the programming community.
+
+I plan to change that, in my own way.
+
+For the past two years, I've been working with BigCommerce, collaborating with Technical Account Managers, solution architects, and handling several dozen support tickets and community posts. After experiencing the strengths and pitfalls that BigCommerce offers, I think it's fair to share what I've learned and help anyone else facing similar challenges.
+
+I plan to create a Wish List for BigCommerce and discuss topics that I've asked or seen asked by others. My goal is to assist programmers in finding solutions and to contribute to the community. This will be as much a learning experience for me as I hope it will be for anyone interested in web development and building on a flexible platform.
+
+## BigCommerce and Me
+
+> Miva, Shopify, BigCommerce, Adobe Commerce, Salesforce Commerce Cloud...
+
+There were plenty of brands that threw their hat in the ring for a project I've worked on. However, one that kept ticking all the boxes we were listening in on was BigCommerce. Their introduction was strong and was made even better thanks to having a sandbox environment to play around with initial development.
+
+Of note, the Stencil Framework powering their Cornerstone storefront felt intuitive and easy to grasp; I can pull a fresh copy of Cornerstone and make it fit most needs. BigCommerce handlebars have intuitive server-side rendering features, but not all was smooth in development.
+
+### Quick Introduction to a Fix
+
+Reading the BigCommerce community posts for product custom fields, it was suggested you'd have to 'iterate' through each field, determine if any matched your custom field name, then use the value.
+
+```mustache
+
+{{#each custom_fields}}
+    {{#all (if name '===' 'SHOW_LINK') (if value '===' '1')}}
+        <a href="#">Hello World</a>
+    {{/all}}
+{{/each}}
+```
+
+Here's an alternative that can be done:
+
+```mustache
+
+{{#filter custom_fields "SHOW_LINK" property="name"}}
+    {{#if value '===' '1'}}
+        <a href="#">Hello World</a>
+    {{/if}}
+{{/filter}}
+```
+
+I look forward to providing insights as I continue learning.
