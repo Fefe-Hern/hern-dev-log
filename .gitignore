@@ -32,6 +32,7 @@ public/sitemap.xml
 
 # misc
 .DS_Store
+/app/tag-data.json
 
 # debug
 *.log
