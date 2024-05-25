@@ -1,26 +1,24 @@
 interface Project {
-  title: string,
-  description: string,
-  href?: string,
-  imgSrc?: string,
+  title: string
+  description: string
+  href?: string
+  imgSrc?: string
 }
 
 const projectsData: Project[] = [
   {
-    title: 'A Search Engine',
-    description: `What if you could look up any information in the world? Webpages, images, videos
-    and more. Google has many features to help you find exactly what you're looking
-    for.`,
-    imgSrc: '/static/images/google.png',
-    href: 'https://www.google.com',
+    title: 'BigCommerce',
+    description: `I've worked with two large businesses that are moreso Marketplaces than Storefronts, and helped 
+    migrate them to BigCommerce. I shall eventually make case studies, and some of the best challenges we've faced.`,
+    imgSrc: '/static/images/bigcommerce.png',
+    //href: 'https://www.google.com',
   },
   {
-    title: 'The Time Machine',
-    description: `Imagine being able to travel back in time or to the future. Simple turn the knob
-    to the desired date and press "Go". No more worrying about lost keys or
-    forgotten headphones with this simple yet affordable solution.`,
-    imgSrc: '/static/images/time-machine.jpg',
-    href: '/blog/the-time-machine',
+    title: 'Connectwise',
+    description: `Upon migrating to Connectwise CRM, I've worked on custom API integrations, and developing the invoice and sales reports
+     for our own usage.`,
+    imgSrc: '/static/images/connectwise.png',
+    //href: '/blog/the-time-machine',
   },
 ]
 
